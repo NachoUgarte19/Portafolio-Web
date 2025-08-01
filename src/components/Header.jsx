@@ -1,9 +1,12 @@
 export default function Header() {
   return (
-    <header className="py-4 mi-header bg-transparent">
+    <header className="py-4 mi-header bg-transparent" id="inicio">
       <nav className="navbar navbar-expand-md navbar-dark container p-0">
-        <a className="navbar-brand fs-4 m-0" href="#">
-          Portafolio
+        <a href="#inicio">
+          <img src="/public/assets/logoSinFondo.png" alt="Logo" className="logo-header"/>
+        </a>
+        <a className="navbar-brand fs-4 m-0" href="#inicio">
+          Ignacio Rodriguez Ugarte
         </a>
         <button
           className="navbar-toggler d-md-none"
@@ -23,6 +26,9 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#projects">Proyectos</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#contact">Pruebas UI</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact">Contacto</a>

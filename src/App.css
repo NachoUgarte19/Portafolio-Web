@@ -1,10 +1,11 @@
+
 #root {
   margin: 0;
   padding: 0;
 }
-body {
+body, header, footer {
   font-family: 'DM Sans', sans-serif; 
-  background: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #141e30, #243b55);
   color: white;
 }
 .read-the-docs {
@@ -22,22 +23,47 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .mi-header .nav-link {
-  color: #fff !important;
+  color: #fff;
 }
 .mi-header .navbar-toggler {
-  border: none;         /* borde del botón */
+  border: none; 
 }
 .mi-header .navbar-toggler-icon {
-  filter: brightness(0) invert(1);          /* icono de hamburguesa en blanco */
+  filter: brightness(0) invert(1); 
 }
-.nav-link {
-  transition: transform 0.2s ease, filter 0.2s ease;
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
   padding: 4px;
   border-radius: 10px;
-  color: white;
+  color: #fff;
+  transition: transform .2s ease, filter .2s ease;
 }
-.nav-link:hover {
-  background-color: rgb(15, 27, 37);
+
+.navbar-nav a {
+  position: relative;
+}
+.navbar-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #b39ddb, #9575cd, #7e57c2);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+.navbar-nav a:hover::before {
+  transform: scaleX(1);
+}
+
+.logo-header {
+  width: 50px; 
+  height: auto; 
+  margin-right: 1rem;
 }
 
 /* HERO */
@@ -62,11 +88,53 @@ body {
 }
 
 /* ABOUT */
-.about {
 
-}
+
 
 /* PROJECTS */
+
+.card:hover {
+  transform: translateY(-6px); 
+  transition: background-color 0.3s ease;
+}
+
+/* CARTELES TECH */
+.tech-selenium {
+  background-color: #43B02A;
+  color: #141e30;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.tech-python {
+  background-color: #3776AB;
+  color: #141e30;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.tech-javascript {
+  background-color: #F7DF1E;
+  color: #141e30;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.tech-react {
+  background-color: #61DAFB;
+  color: #141e30;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.tech-typescript {
+  background-color: #3178C6;
+  color: #141e30;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
 .botonProyecto {
   background-color: #141e30;
   border-color: #141e30;
@@ -79,4 +147,15 @@ body {
   filter: brightness(1.2);
 }
 
-
+/* PRUBEAS UI */
+.btn-pruebasui {
+  background-color: #141e30;
+  border-color: #141e30;
+  color: white;
+}
+.btn-pruebasui:hover {
+  background-color: #243b55 !important;  /* color más claro que #141e30 */
+  border-color: #243b55 !important;
+  color: #fff    !important;  /* texto blanco para contraste */
+  filter: brightness(1.2);
+}
