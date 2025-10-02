@@ -38,6 +38,8 @@ footer {
 .mi-header .navbar-toggler {
   border: 1px solid #ffffff;
   color: #000;
+  margin-left: auto;
+  align-self: center;
 }
 
 .mi-header .navbar-toggler-icon {
